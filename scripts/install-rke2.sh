@@ -11,9 +11,9 @@ do
 done
 
 # set user permissions on rke2 kubeconfig and copy for local system availability
-mkdir /vagrant/config
+mkdir -p /vagrant/config
 sudo chmod 755 /etc/rancher/rke2/rke2.yaml
-cp /etc/rancher/rke2/rke2.yaml /vagrant/config/rke2.yaml
+cp -r /etc/rancher/rke2/rke2.yaml /vagrant/config/rke2.yaml
 
 # install kubectl for client access inside vagrant guest
 sudo snap install kubectl --classic
