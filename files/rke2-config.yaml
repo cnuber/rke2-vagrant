@@ -1,0 +1,5 @@
+write-kubeconfig-mode: "0644"
+service-cidr: "10.41.0.0/16"
+cluster-cidr: "10.42.0.0/16"
+disable:
+  - rke2-canal

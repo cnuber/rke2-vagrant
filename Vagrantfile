@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-18.04"
+  config.vm.define "rke2demo"
   config.vm.provision "shell", path: "scripts/install-rke2.sh"
   config.vm.network "forwarded_port", guest: 6443, host: 6443
   config.vm.provision "shell", privileged: false, inline: <<-EOF
